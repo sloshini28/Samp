@@ -1,0 +1,164 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 900px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+}
+
+h2 {
+  color: #1e3c72;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+th {
+  background-color: #1e3c72;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+tr:hover {
+  background-color: rgba(30, 60, 114, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Input fields in table for editing */
+input {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #1e3c72;
+  box-shadow: 0 0 5px rgba(30, 60, 114, 0.3);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 6px 12px;
+  margin: 2px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button.update-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+button.update-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button.delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: #e53935;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  table, th, td, input, button {
+    font-size: 12px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+/* Buttons General */
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Update Button */
+.update-button {
+  background-color: #4CAF50; /* soft green */
+  color: white;
+  box-shadow: 0 3px 6px rgba(72, 239, 128, 0.3);
+}
+
+.update-button:hover {
+  background-color: #43a047;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(72, 239, 128, 0.4);
+}
+
+/* Delete Button */
+.delete-button {
+  background-color: #f44336; /* soft red */
+  color: white;
+  box-shadow: 0 3px 6px rgba(255, 99, 71, 0.3);
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.4);
+}
+
+/* Optional: Give spacing between buttons */
+.update-button,
+.delete-button {
+  margin: 4px;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+}

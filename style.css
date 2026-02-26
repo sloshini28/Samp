@@ -1,0 +1,148 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main container */
+.container {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+}
+
+/* Main heading */
+h1 {
+  font-size: 32px;
+  color: #1e3c72;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Links as buttons */
+a {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #1e3c72;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+  background: #395aa3;
+  transform: translateY(-2px);
+}
+
+/* Optional subtle fade-in animation for heading */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  a {
+    width: 80%;
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+/* --- Hero Section --- */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* --- Card Layout --- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  width: 250px;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+  color: #1e3c72;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.card p {
+  color: #555;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.card a {
+  display: block;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card a:hover {
+  background: linear-gradient(135deg, #395aa3, #4f77c8);
+  transform: translateY(-3px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
