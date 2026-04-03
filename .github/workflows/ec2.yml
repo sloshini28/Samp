@@ -1,0 +1,27 @@
+name: Deploy to EC2 Instance
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # This MUST match the 'self-hosted' label in your GitHub settings
+    runs-on: self-hosted 
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Copy files to Web Server directory
+        run: |
+          # Create the web folder if it doesn't exist
+          sudo mkdir -p /var/www/html
+          
+          # Copy everything from the GitHub folder to the web folder
+          # We use '.' to copy the current content of the repo
+          sudo cp -r ./* /var/www/html/
+          
+          # Adjust permissions so the web server can read it
+          sudo chmod -R 755 /var/www/html
